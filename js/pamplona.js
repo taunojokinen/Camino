@@ -65,7 +65,7 @@ var cityTexts = [
 		"<p>Tästä se alkaa. Portista ulos ja vanhaa siltaa pitkin 'Nive de Beherobie'-joen yli. Edessä rankka ylämäki.</p>",
 		"<p>Alberque Orisson</p>",
 		"<p>Carlina acaulis L. Hopeakurho</p>",
-		"<p>Roncesvallesin luostari</p>"
+		"<p>Viimein Roncesvallesin luostari alkaa plikottaa puiden välistä. Matkaan kului aikaa aamunkoitosta iltahämärään.</p>"
 
 		],[
    		"<p>Matkareitti sujui mukavasti tasaisella polulla. Viimeisellä neljällä kilometrilla tosin oli 300 m laskeutumista Arga-joen laaksoon.</p>",
