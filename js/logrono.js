@@ -1,13 +1,13 @@
 const cityButton = document.getElementsByClassName("buttonChangeImage")[1];
 let cityIndex = 0;
 const nextCity=[
-	"Estella 22 km",
-  	"Sansol 28 km",
-  	"Logrõno 21 km",
+	"Estella",
+  	"Sansol",
+  	"Logrõno",
 	"Takaisin alkuun"
 	]
 
-var city=[
+const city=[
 	"<h3>Puente la Reina 24 km</h3> <p>Pamplonasta matka jatkui kaupunkin katuja pitkin kohti. Reitti kohosi hiljalleen 350 m Alto de Perdónia, "+
   	"joka on tämän päivätaipaleen korkein kohta. Ylhäällä on tunnettu pyhiinvaeltajajoukko esittävä taideteos. Täältä laskeuduttiin kolmen pienen"+
   	"kylän kautta Puente la Reinaan, jonka vanhaa pääkatua pitkin päädyttiin sillale, jonka mukaan kaupunki on saanut nimensä.<br><br>"+
@@ -51,7 +51,7 @@ cityButton.addEventListener('click', function() {
 	change();
       });
 
-var cityimages = [
+const cityimages = [
 	[	
 	"images/4_1_aamu_pamplonassa.jpg",
     "images/4_2_Saapuminen_puento_de_la_Reinaan.jpg",
@@ -74,10 +74,10 @@ var cityimages = [
     ]
 	
 ]
-var cityTexts = [
+const cityTexts = [
 	[	
 		"<p>Aamu Pamplonassa</p>",
-   		"<p>Saapuminen_puento_de_la_Reinaa</p>n",
+   		"<p>Saapuminen_puento_de_la_Reinaa</p>",
 		"<p>Arga-joen silta</p>", 
 		],[
 		"<p>Aamiainen</p>",
@@ -95,8 +95,8 @@ var cityTexts = [
     "Logroño"
     ]
 ]
-var imageButton = document.getElementsByClassName("buttonChangeImage")[0];
-var imageIndex = -1;
+const imageButton = document.getElementsByClassName("buttonChangeImage")[0];
+let imageIndex = -1;
 
 imageButton.addEventListener('click', function(){change();});
 

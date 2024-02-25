@@ -1,15 +1,16 @@
 const cityButton = document.getElementsByClassName("buttonChangeImage")[1];
 let cityIndex = 0;
+
 const nextCity=[
-  	"Nájera 15 km",
-  	"Santo Domingo de la Calzada 21 km",
-	"Belorado 23 km",
-	"San Juan de Ortega 23 km",
-	"Burgos 24 km",
+  	"Nájera",
+  	"Santo Domingo de la Calzada",
+	"Belorado",
+	"San Juan de Ortega",
+	"Burgos",
 	"Takaisin alkuun"
 	]
 
-var city=[
+const city=[
 	"<h3>Navarrete 13 km</h3> <p>Navarrete on viehättävä kylä Espanjan La Riojan alueella, jossa asuu noin 3 000 ihmistä. Sijaiten Camino de Santiago -pyhiinvaellusreiti" + 
 	" varrella, se houkuttelee vuosittain lukuisia pyhiinvaeltajia ja matkailijoita. Kylä on tunnettu historiallisista rakennuksistaan, kuten Santa Maria de la Asunciónin" + 
 	"kirkosta ja San Juanin kappelista, jotka heijastavat alueen rikasta perinnettä.</br></br> Navarreten keskusta on täynnä viehättäviä kujia, aukioita ja vanhoja kivitaloja, jotka" + 
@@ -51,9 +52,6 @@ var city=[
 	"Lisäksi se on tunnettu herkullisesta gastronomiastaan, erityisesti paikallisista erikoisuuksista, kuten morcilla-makkarasta ja lechazo-asadosta. Burgos on myös "+
 	"tärkeä pysähdyspaikka Camino de Santiago -pyhiinvaellusreitillä, mikä tekee siitä suositun kohteen pyhiinvaeltajille ympäri maailman. Kaiken kaikkiaan Burgos tarjoaa "+
 	"vierailijoilleen unohtumattoman yhdistelmän historiaa, kulttuuria ja gastronomiaa.</p>"
-
-	
-
 ]
 
 cityButton.addEventListener('click', function() {
@@ -68,7 +66,7 @@ cityButton.addEventListener('click', function() {
 	change();
       });
 
-var cityimages = [
+const cityimages = [
 	[	
 	"images/8_1_logrono_aamulla.jpg",
     "images/8_2_Parque_de_la_Grajera.jpg",
@@ -100,9 +98,8 @@ var cityimages = [
     "images/d_3_virvalilja.jpg",
     "images/d_4_burgos.jpg"
     ]
-	
 ]
-var cityTexts = [
+const cityTexts = [
 	[	
 	"<p>Logroño aamulla</p>",
    	"<p>Parque de la Grajera</p>n",
@@ -135,8 +132,8 @@ var cityTexts = [
 	"<p>Lämmintä 35 astetta. Kadut kaupungin ovat pitkiä suoroa ...</p>"
     ]
 ]
-var imageButton = document.getElementsByClassName("buttonChangeImage")[0];
-var imageIndex = -1;
+const imageButton = document.getElementsByClassName("buttonChangeImage")[0];
+let imageIndex = -1;
 
 imageButton.addEventListener('click', function(){change();});
 

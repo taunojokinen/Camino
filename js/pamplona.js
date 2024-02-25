@@ -1,12 +1,12 @@
-var cityButton = document.getElementsByClassName("buttonChangeImage")[1];
-var cityIndex = 0;
-var nextCity=[
-	"Zubiri 22 km",
-	"Pamplona 21 km",
+const cityButton = document.getElementsByClassName("buttonChangeImage")[1];
+let cityIndex = 0;
+const nextCity=[
+	"Zubiri",
+	"Pamplona",
 	"Takaisin alkuun",
 	
 ]
-var city=[
+const city=[
 	"<h3 >Roncesvalles 25 km</h3> <p>Ensimmäinen matkapäivä alkoi aamuhämärissä kiipeämällä Pydrenneiden yli. Reitin korkein kohta oli 1430 m, " +
 	"joten nousua Saien Jean Pied de Prtista tuli liki 1300 m. Minkä jälkeen oli vielä laskeutumista liki 600 m. Osa alamäestä oli aikamoista" +
 	"hyppelyä kiveltä kivelle. Kun luostarin hahmo vihdoin tuli näkyviin, ilta alkoi jo hämärtyä. Kaikki majapaikat pienessä vuoristokylässä" +
@@ -42,7 +42,7 @@ cityButton.addEventListener('click', function() {
 	change();
       });
 
-var cityimages = [
+const cityimages = [
 		[	
 		"images/1_1_saintJean.jpg",
    		"images/1_2_orisson.jpg",
@@ -60,7 +60,7 @@ var cityimages = [
 		"images/3_6_pamplona.jpg"
 		]
 ]
-var cityTexts = [
+const cityTexts = [
 		[	
 		"<p>Tästä se alkaa. Portista ulos ja vanhaa siltaa pitkin 'Nive de Beherobie'-joen yli. Edessä rankka ylämäki.</p>",
 		"<p>Alberque Orisson</p>",
@@ -79,8 +79,8 @@ var cityTexts = [
 		"<p>Pamplona on vanha linnoituskaupunki. Sisäänkäynti kulkee näyttävän portin läpi.</p>"
 		]
 ]
-var imageButton = document.getElementsByClassName("buttonChangeImage")[0];
-var imageIndex = -1;
+const imageButton = document.getElementsByClassName("buttonChangeImage")[0];
+let imageIndex = -1;
 
 imageButton.addEventListener('click', function(){change();});
 
