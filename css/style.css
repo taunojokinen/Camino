@@ -1,5 +1,5 @@
 :root {
-    --dark-background-color: #277553;
+    --dark-background-color: #fff;
     --light-background-color: #4FE7B5;
     --dark-foreground-color: #000;
     --light-foreground-color: #fff;
@@ -7,7 +7,7 @@
     --accent-color: #ccc;
     --general-padding: 2em;
     --general-margin: 1em;
-    --nav-background-color: #023d20;
+    --nav-background-color: #236167;
     --nav-text-color: #fff2e6;
 }
 
@@ -20,6 +20,11 @@
 
 *,*::before,*::after {
     box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
 }
 
 a {
@@ -36,25 +41,13 @@ a:hover {
 div#container {
     display: flex;
     flex-direction: column;
-    margin: var(--general-margin);
+    margin: 0vw;
 }
 
 div#content {
     display: inherit;
 }
 
-div#content section {
-    width: 100vw;
-    display: inherit;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-right: 1px solid var(--dark-background-color);
-    margin: calc(var(--general-margin)*1) 0 var(--general-margin) 0;
-}
-
-div#content aside {
-    width: 20vw;
-}
 
 header {
     display: inherit;
@@ -67,38 +60,58 @@ header h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-nav {
-    font-size: 1.5vw;
-    background-color: var(--nav-background-color);
+div#content aside {
+    width: 0vw;
+}
+
+section#main {
+    width: 97vw;
     display: inherit;
-    border-top: 1px solid var(--dark-foreground-color);
-    border-bottom: 1px solid var(--dark-foreground-color);
-    height: 7vw;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: 0px solid var(--dark-background-color);
+    margin: 0px;
+    padding:0px;
+}
 
-
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: 1.2vw;
+    background-color: var(--nav-background-color);
+    display: block;
+    border-top: 0px solid var(--dark-foreground-color);
+    border-bottom: 0px solid var(--dark-foreground-color);
+    height: 43vw;
+    width: auto;
+    text-align: left;
 }
 
 nav ul {
-    padding-left: calc(var(--general-padding) / 2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    padding-left: 0px;
+    text-align: left;
+    margin: 0vw;
 }
 
 nav li {
-    display: inline-block;
+    display: block;
     color: white;
     width: auto;
-    padding:2vw;
-    text-align: center;
+    padding:1vw;
+    text-align: left;
     margin: auto;
 }
-
-article {
-    flex: 33.33%;
+div#content section {
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: 1px solid var(--dark-background-color);
+    margin: calc(var(--general-margin)*2) 0 var(--general-margin) 0;
 }
-
+article {
+    flex: 100%;
+}
 
 article div {
     margin: calc(var(--general-margin)/4);
@@ -111,6 +124,7 @@ article h3 {
 }
 
 article p {
+    flex: 100%;
     margin: var(--general-margin);
     line-height: 1.5;
     font-size:  1vw;
@@ -122,21 +136,28 @@ article div img {
     margin-left: auto;
     margin-right: auto;
     height: vw;
-    width: 90%;
+    width: 92%;
     object-fit: contain;
 }
 
 div#imagetext {
     text-align: left;
-    padding-left: 0.5vw;
+    padding-left: 0vw;
+    width: 100%;
+}
+
+div#city {
+    text-align: left;
+    padding-left: 0.4vw;
+    width: 100%;
 }
 
 article div iframe {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 28vw;
-    width: 90%;
+    height: 30vw;
+    width: 92%;
     object-fit: contain;
 }
 
@@ -149,22 +170,22 @@ div#buttons{
 
 .button {
     font-size:  1vw;
+    align-items: center;
 	background-color: var(--nav-background-color);
 	border: none;
 	color: var(--nav-text-color);
 	padding: 0vw;
 	text-align: center;
 	text-decoration: none;
-	margin-left: 3vw;
+	margin-left: 2vw;
+    margin-right: auto;
     margin-top: 1vw;
 	cursor: pointer;
 	border-radius: 1vw;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
-	width: 12vw;
-    height: 5vw;
-
-
+	width: 10vw;
+    height: 3vw;
 
   }
   .button2:hover {
@@ -183,7 +204,6 @@ aside {
 footer {
     width: 100vw;
     background-color: var(--nav-background-color);
-    display: inherit;
     height: 5vw;
     font-size: 1.5vw;
     text-align: center;
@@ -196,6 +216,12 @@ footer p {
 }
 
 @media only screen and (max-width: 1200px) {
+    
+    nav{
+        font-size: 2vw;
+        height:67vw;  
+    }
+    
     div#content {
         flex-direction: row;
     }
@@ -207,16 +233,18 @@ footer p {
     }
 
     article {
-        flex: 50%;
+        flex: 45vw;
+        font-size: 2vw;
     }
 
     article div img {
-        width: 50vw;
+        width: 45vw;
     }
 
     div#imagetext {
         text-align: left;
         padding-left: 0vw;
+        font-size: 2vw;
     }
 
     article#first {
@@ -224,14 +252,14 @@ footer p {
     }
 
     .button{
-        margin-left:7vw;
+        margin-left:5vw;
     }
 }
 
 @media only screen and (max-width: 920px) {
     nav{
         font-size: 2vw;
-        height:8vw  
+        height:140vw;  
     }
 
     div#content {
@@ -243,6 +271,13 @@ footer p {
         line-height: 1.5;
         font-size:  2vw;
     }
+
+    article h3 {
+        margin: var(--general-margin);
+        line-height: 1.5;
+        font-size:  2vw;
+    }
+
     article div img {
         width: 60%;
     }
