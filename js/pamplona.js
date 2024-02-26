@@ -1,5 +1,53 @@
+
+
 const cityButton = document.getElementsByClassName("buttonChangeImage")[1];
 let cityIndex = 0;
+
+const imageButton = document.getElementsByClassName("buttonChangeImage")[0];
+let imageIndex = -1;
+let timerReset = false
+
+cityButton.addEventListener('click', function() {
+	cityIndex++;
+    if (cityIndex == city.length) {
+        cityIndex = 0;
+    }	
+    document.getElementById("city").innerHTML = city[cityIndex];
+	document.getElementById("cityButton").innerHTML = nextCity[cityIndex]
+	imageIndex=0;
+	imageButtonPressed();
+    });
+	  
+
+imageButton.addEventListener('click', function(){imageButtonPressed();});
+
+function imageButtonPressed() {
+	timerReset = true;
+	console.log(timerReset)
+	change();
+	}
+function timerInterrupt() {
+	console.log(timerReset)
+	if (timerReset == true) timerReset = false;
+	else change();
+}
+function change(){
+	imageSources = cityimages[cityIndex];
+	imageTexts = cityTexts[cityIndex];
+	if (imageIndex == imageSources.length) {
+		imageIndex = 0;
+	}
+	if (imageIndex == -1 ) {
+	imageIndex = 1;
+	} 
+    document.getElementById("image").src = imageSources[imageIndex];
+	document.getElementById("imagetext").innerHTML = imageTexts[imageIndex];
+
+    imageIndex++;
+}
+
+const myInterval = setInterval(timerInterrupt,10000);
+
 const nextCity=[
 	"Zubiri",
 	"Pamplona",
@@ -29,18 +77,6 @@ const city=[
 	" järjestettävästä San Fermínin festivaalista ja siihen kuuluvasta härkäjuoksusta. 100-luvulta Pamplona oli roomalainen kaupunki" +
 	" nimeltä Pompeiopolis. Pamplonan vanha kaupunki on todella sokkeloinen.</p>"
 ]
-
-cityButton.addEventListener('click', function() {
-	cityIndex++;
-    if (cityIndex == city.length) {
-        cityIndex = 0;
-    }
-	
-    document.getElementById("city").innerHTML = city[cityIndex];
-	document.getElementById("cityButton").innerHTML = nextCity[cityIndex]
-	imageIndex=0;
-	change();
-      });
 
 const cityimages = [
 		[	
@@ -79,26 +115,3 @@ const cityTexts = [
 		"<p>Pamplona on vanha linnoituskaupunki. Sisäänkäynti kulkee näyttävän portin läpi.</p>"
 		]
 ]
-const imageButton = document.getElementsByClassName("buttonChangeImage")[0];
-let imageIndex = -1;
-
-imageButton.addEventListener('click', function(){change();});
-
-function change(){
-	imageSources = cityimages[cityIndex];
-	imageTexts = cityTexts[cityIndex];
-	if (imageIndex == imageSources.length) {
-		imageIndex = 0;
-    }
-	if (imageIndex == -1 ) {
-		imageIndex = 1;
-    }
-    document.getElementById("image").src = imageSources[imageIndex];
-	document.getElementById("imagetext").innerHTML = imageTexts[imageIndex];
-
-    imageIndex++;
-
-
-}
-
-const myInterval = setInterval(change,10000);

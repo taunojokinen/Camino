@@ -84,7 +84,7 @@ nav {
     border-top: 0px solid var(--dark-foreground-color);
     border-bottom: 0px solid var(--dark-foreground-color);
     height: 43vw;
-    width: auto;
+    width: 25vw;
     text-align: left;
 }
 
