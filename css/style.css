@@ -50,22 +50,14 @@ div#content {
 
 
 header {
-    display: inherit;
-    justify-content: center;
-    align-items: center;
-    height: 0vw;
+    display: none;
 }
 
 header h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-div#content aside {
-    width: 0vw;
-}
-
 section#main {
-    width: 97vw;
     display: inherit;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -102,15 +94,9 @@ nav li {
     text-align: left;
     margin: auto;
 }
-div#content section {
-    display: inline-block;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-right: 1px solid var(--dark-background-color);
-    margin: calc(var(--general-margin)*2) 0 var(--general-margin) 0;
-}
+
 article {
-    flex: 100%;
+    width: 30vw;
 }
 
 article div {
@@ -124,32 +110,28 @@ article h3 {
 }
 
 article p {
-    flex: 100%;
     margin: var(--general-margin);
     line-height: 1.5;
-    font-size:  1vw;
+    font-size:  .9vw;
 }
 
 article div img {
-    display: block;
     margin-top: 1vw;
     margin-left: auto;
     margin-right: auto;
-    height: vw;
     width: 92%;
     object-fit: contain;
 }
 
-div#imagetext {
+div#image{
     text-align: left;
     padding-left: 0vw;
-    width: 100%;
+
 }
 
 div#city {
     text-align: left;
     padding-left: 0.4vw;
-    width: 100%;
 }
 
 article div iframe {
@@ -163,12 +145,13 @@ article div iframe {
 
 div#buttons{
     font-size:  50px;
-    display: inline;
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 2.5vw ;
 }
 
-.button {
+button {
     font-size:  1vw;
     align-items: center;
 	background-color: var(--nav-background-color);
@@ -177,7 +160,7 @@ div#buttons{
 	padding: 0vw;
 	text-align: center;
 	text-decoration: none;
-	margin-left: 2vw;
+	margin-left: auto;
     margin-right: auto;
     margin-top: 1vw;
 	cursor: pointer;
@@ -186,13 +169,9 @@ div#buttons{
 	transition-duration: 0.4s;
 	width: 10vw;
     height: 3vw;
-
-  }
-  .button2:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
 
-  .button:hover {
+  button:hover {
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
 
@@ -219,32 +198,29 @@ footer p {
     
     nav{
         font-size: 2vw;
-        height:67vw;  
+        width: 20vw;
+        height:60vw;  
     }
     
     div#content {
         flex-direction: row;
     }
 
-    div#content aside {
-        width: 0vw;
-        padding-top: var(--general-padding);
-        padding-left: calc(var(--general-padding) / 2);
-    }
 
     article {
-        flex: 45vw;
+        width: 40vw;
         font-size: 2vw;
     }
 
-    article div img {
-        width: 45vw;
+    article#image {
+        width: 40vw;
     }
 
-    div#imagetext {
+    p {
         text-align: left;
         padding-left: 0vw;
         font-size: 2vw;
+
     }
 
     article#first {
@@ -254,22 +230,32 @@ footer p {
     .button{
         margin-left:5vw;
     }
+    footer p {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 920px) {
     nav{
         font-size: 2vw;
-        height:140vw;  
+        height:150vw;
+        width: 30%;  
     }
 
     div#content {
         flex-direction: column;
     }
 
+    article {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     article p {
         margin: var(--general-margin);
         line-height: 1.5;
-        font-size:  2vw;
+        font-size:  1.5vw;
     }
 
     article h3 {
@@ -279,22 +265,41 @@ footer p {
     }
 
     article div img {
-        width: 60%;
+        width: 95%;
+        padding-left: 2vw;
+  
+    }
+
+    article#image {
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     div#imagetext {
         text-align: left;
-        padding-left: 16vw;
+        padding-left: 1vw;
     }
-    article {
-        flex: 100%;
-    }
+
 
     article#first {
         display:none;
     }
 
-    .button{
-        margin-left:23vw;
+    div#buttons{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2.5vw ;
     }
+
+    button{
+        margin-left:10vw;
+        width: 20vw;
+        height:5vw;
+        font-size: 2vw;
+    }
+
+
 }
