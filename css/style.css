@@ -198,6 +198,8 @@ footer p {
     
     nav{
         font-size: 2vw;
+        line-height: 2;
+        padding: 1vw;
         width: 20vw;
         height:60vw;  
     }
@@ -232,14 +234,15 @@ footer p {
     }
     footer p {
         text-align: center;
+        font-size: 2vw;
     }
 }
 
 @media only screen and (max-width: 920px) {
     nav{
-        font-size: 2vw;
         height:150vw;
-        width: 30%;  
+        width: 30%;
+        font-size: 3vw;  
     }
 
     div#content {
